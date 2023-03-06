@@ -6,9 +6,6 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import Reducers from './reducers'
-import { disableReactDevTools } from '@fvilers/disable-react-devtools'
-
-if (ProcessingInstruction.env.NODE_ENV === 'production') disableReactDevTools()
 
 const store = createStore(Reducers, compose(applyMiddleware(thunk)))
 
